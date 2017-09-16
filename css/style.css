@@ -11,8 +11,8 @@ body {
 
 body {
     background: url('../img/whopokemon.png');
-    background-size: cover;
     background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .wrapper {
@@ -25,14 +25,14 @@ body {
     flex-direction: column;
 }
 
-.pokemon-stats {
+.poke-stats {
     padding: 20px;
     color: red;
     font-size: 40px;
     font-weight: bold;
 }
 
-.pokemon-container {
+.poke-container {
     padding: 20px;
 }
 
