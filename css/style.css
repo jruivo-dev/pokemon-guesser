@@ -26,8 +26,8 @@ body {
 }
 
 .poke-stats {
-    padding: 20px;
-    font-size: 40px;
+    padding: 15px;
+    font-size: 45px;
     font-weight: bold;
     display: flex;
     justify-content: center;
@@ -39,8 +39,6 @@ body {
     color: #FFCB05;
     text-shadow: -2px 0 #3A5DA8, 0 2px #3A5DA8, 2px 0 #3A5DA8, 0 -2px #3A5DA8;
 }
-
-.poke-container {}
 
 img {
     max-height: 400px;
@@ -66,9 +64,49 @@ button {
     border-radius: 10px;
     background-color: #FFCB05;
     color: #3A5DA8;
-    border: 2px solid #3A5DA8;
+    border: 3px solid #3A5DA8;
     padding: 10px 30px;
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+}
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+
+#snackbar {
+    visibility: hidden;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 16px;
+    position: fixed;
+    bottom: 50vh;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 1s, fadeout 0.5s 2s;
+}
+
+
+/* Animations to fade the snackbar in and out */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
