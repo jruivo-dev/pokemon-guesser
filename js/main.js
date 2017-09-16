@@ -9,6 +9,20 @@ let currentPokemon = null;
 let pokeImage = document.querySelector('.poke-image');
 let passButton = document.querySelector('.pass-button')
 let guessButton = document.querySelector('.guess-button')
+let score = document.querySelector('.score');
+let lives = document.querySelector('.lives');
+
+let gameOver = false;
+let score = 0;
+let lives = 3;
+
+function init() {
+    gameOver = false;
+    score = 0;
+    lives = 3;
+}
+
+
 
 function getRandomPokemon() {
     let index = Math.floor(Math.random() * pokeList.length - 1) + 1;
@@ -22,14 +36,13 @@ function changePokemon() {
 }
 
 
+
+
 function guessPokemon() {
     let guess = prompt(`What's your guess?`);
-    console.log(guess)
-    console.log(guess.toLowerCase(), currentPokemon.toLowerCase())
     if (guess.toLowerCase() === currentPokemon.toLowerCase()) {
         alert('gotteeem');
         changePokemon();
-
     } else
         alert(`That's a nope! Sorry`)
 }

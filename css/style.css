@@ -27,14 +27,20 @@ body {
 
 .poke-stats {
     padding: 20px;
-    color: red;
     font-size: 40px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 100vh;
 }
 
-.poke-container {
-    padding: 20px;
+.poke-stats div {
+    padding: 30px;
+    color: #FFCB05;
+    text-shadow: -2px 0 #3A5DA8, 0 2px #3A5DA8, 2px 0 #3A5DA8, 0 -2px #3A5DA8;
 }
+
+.poke-container {}
 
 img {
     max-height: 400px;
@@ -43,4 +49,26 @@ img {
 
 img.desaturate {
     filter: brightness(0%);
+}
+
+.poke-buttons {
+    display: flex;
+    width: 100vh;
+    justify-content: center;
+    padding: 30px;
+}
+
+.divider {
+    width: 30px;
+}
+
+button {
+    border-radius: 10px;
+    background-color: #FFCB05;
+    color: #3A5DA8;
+    border: 2px solid #3A5DA8;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
