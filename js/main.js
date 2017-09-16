@@ -1,3 +1,1 @@
-import { foo, bar } from 'js/foobar.js';
-
-foo();
+console.log('hello')

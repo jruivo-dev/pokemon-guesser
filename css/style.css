@@ -9,24 +9,36 @@ body {
     box-sizing: border-box;
 }
 
-body {}
-
-.wrapper {
-    background: url('/home/jruivo/Documents/webdev/mystuff/img/whopokemon.png');
+body {
+    background: url('../img/whopokemon.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    background-size: 100% 100%;
 }
 
-.pokemon {
-    margin-left: 100px;
+.wrapper {
+    margin-left: 60px;
+    width: 600px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pokemon-stats {
+    padding: 20px;
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.pokemon-container {
+    padding: 20px;
 }
 
 img {
-    max-height: 500px;
+    max-height: 400px;
+    max-width: 500px;
 }
 
 img.desaturate {
