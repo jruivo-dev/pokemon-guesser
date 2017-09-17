@@ -1,10 +1,11 @@
-const pokeList = ['Blastoise', 'Bulbasaur', 'Charizard', 'Charmander', 'Charmeleon', 'Ivysaur',
+const pokeListData = ['Blastoise', 'Bulbasaur', 'Charizard', 'Charmander', 'Charmeleon', 'Ivysaur',
     'Squirtle', 'Venusaur', 'Wartortle', `Caterpie`, `Metapod`, `Butterfree`, `Weedle`, `Kakuna`,
     `Beedrill`, `Pidgey`, `Pidgeotto`, `Pidgeot`, `Rattata`, `Raticate`, `Spearow`, `Fearow`, `Ekans`,
     `Arbok`, `Pikachu`, `Raichu`, `Sandshrew`, `SandSLash`, 'Nidoran', `Nidorina`, `Nidoqueen`, `Nidoran`,
     `Nidorino`, `Nidoking`, `Clefairy`, `Clefable`, `Vulpix`, `Ninetales`, `Jigglypuff`, `Wigglytuff`
 ]
 
+let pokeListArr = [];
 const IMAGE_PATH = './img/pokemon/'
 const PNG = '.png';
 
@@ -17,12 +18,13 @@ let livesElement = document.querySelector('.lives');
 let bestScoreElement = document.querySelector('.best-score');
 var snackbarElement = document.getElementById("snackbar")
 
-let gameOver = false;
 let score = 0;
 let lives = 3;
 let bestScore = 0;
+let lastIndex = 0;
 
 function init() {
+    pokeListArr = [...pokeListData];
     gameOver = false;
     score = 0;
     lives = 3;
@@ -30,12 +32,12 @@ function init() {
     changePokemon();
 }
 
-
 // returns random pokemon image path
 function getRandomPokemon() {
-    let index = Math.floor(Math.random() * pokeList.length - 1) + 1;
-    currentPokemon = pokeList[index];
-    return IMAGE_PATH + pokeList[index] + PNG;
+    index = Math.floor(Math.random() * pokeListArr.length - 1) + 1;
+    currentPokemon = pokeListArr.splice(index, 1).join();
+    console.log(currentPokemon)
+    return IMAGE_PATH + currentPokemon + PNG;
 }
 
 // updates img element with new pokemon
@@ -67,7 +69,7 @@ function isGuessRight(guess) {
         setTimeout(() => {
             snackbarElement.classList.remove("show");
             changePokemon();
-        }, 2200);
+        }, 2500);
 
     } else {
         lives--;
@@ -83,7 +85,7 @@ function isGuessRight(guess) {
         // After 3 seconds, remove the show class from DIV
         setTimeout(() => {
             snackbarElement.classList.remove("show");
-        }, 2200);
+        }, 2500);
     }
     updateStatsUI()
 }

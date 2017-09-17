@@ -9,6 +9,15 @@ body {
     box-sizing: border-box;
 }
 
+h1 {
+    color: black;
+    font-size: 40px;
+    -webkit-text-fill-color: white;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
 body {
     background: url('../img/whopokemon.png');
     background-size: 100% 100%;
@@ -16,28 +25,28 @@ body {
 }
 
 .wrapper {
-    margin-left: 60px;
-    width: 600px;
+    width: 800px;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .poke-stats {
-    padding: 15px;
-    font-size: 45px;
-    font-weight: bold;
+    /* padding: 50px; */
     display: flex;
     justify-content: center;
-    width: 100vh;
+    width: 100%;
 }
 
 .poke-stats div {
     padding: 30px;
-    color: #FFCB05;
-    text-shadow: -2px 0 #3A5DA8, 0 2px #3A5DA8, 2px 0 #3A5DA8, 0 -2px #3A5DA8;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3A5DA8;
+    -webkit-text-fill-color: #FFCB05;
+    font-weight: bold;
+    font-size: 50px;
 }
 
 img {
