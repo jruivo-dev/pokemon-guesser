@@ -1,7 +1,7 @@
 const pokeListData = ['Blastoise', 'Bulbasaur', 'Charizard', 'Charmander', 'Charmeleon', 'Ivysaur',
     'Squirtle', 'Venusaur', 'Wartortle', `Caterpie`, `Metapod`, `Butterfree`, `Weedle`, `Kakuna`,
     `Beedrill`, `Pidgey`, `Pidgeotto`, `Pidgeot`, `Rattata`, `Raticate`, `Spearow`, `Fearow`, `Ekans`,
-    `Arbok`, `Pikachu`, `Raichu`, `Sandshrew`, `SandSLash`, 'Nidoran', `Nidorina`, `Nidoqueen`, `Nidoran`,
+    `Arbok`, `Pikachu`, `Raichu`, `Sandshrew`, `Sandslash`, 'Nidoran', `Nidorina`, `Nidoqueen`, `Nidoran`,
     `Nidorino`, `Nidoking`, `Clefairy`, `Clefable`, `Vulpix`, `Ninetales`, `Jigglypuff`, `Wigglytuff`
 ]
 
